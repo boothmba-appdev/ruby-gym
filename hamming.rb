@@ -38,3 +38,24 @@
 
 #   p g_dna.distance_between(t_dna) # => 1
 
+class Dna
+    attr_accessor :strand
+
+    def distance_between(otherDNA)
+        a = self.strand.split("")
+        b = otherDNA.strand.split("")
+        n = a.length
+        counter1 = 0
+        counter2 = 0
+        while counter1 < n
+            if a[counter1] == b[counter1]
+            else
+                counter2 = counter2 + 1
+            end
+            counter1 = counter1 + 1
+        end
+        return counter2
+    end
+end
+
+

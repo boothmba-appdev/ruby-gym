@@ -29,3 +29,21 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+coords = gets.chomp.split(",")
+a = coords[0].to_f
+b = coords[1].to_f
+rad = ((a**2)+(b**2))**0.5
+points = 0
+if rad <= 1
+    points = 10
+elsif rad <= 5
+    points = 5
+elsif rad <= 10
+    points = 1
+else
+    points = 0
+end
+p points.to_s+" points"
+
+
+

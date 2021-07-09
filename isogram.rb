@@ -20,3 +20,21 @@
 #   String.isogram?("eleven") # => false
 #   String.isogram?("subdermatoglyphic") # => true
 
+class String  
+    def String.isogram?(oneStrarg)
+        oneStrarg = oneStrarg.downcase
+        a = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
+        "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        counter = 0
+        a.each do |s|
+            if oneStrarg.count(s)>1
+                counter = 1
+            end
+        end
+        if counter == 1
+            p false
+        else
+            p true
+        end
+    end
+end

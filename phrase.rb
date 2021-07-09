@@ -23,5 +23,19 @@
 #   b.body = "Complementary metal-oxide semiconductor"
 #   b.abbreviate # => "CMOS"
 
+class Phrase
+    attr_accessor :body
 
-
+    def abbreviate
+        content = ""
+        words = self.body.gsub(/-/, " ")
+        words = words.split
+        words.each do |word|
+            p word
+            x = word.split("")
+            x = x[0].upcase
+            content = content+x
+        end
+        return content.gsub(/\s+/, "")
+    end
+end
