@@ -27,9 +27,54 @@ unpredictable_inputs = [
   { :city => "Chicago", :state => "IL", :zip => 60654 }
 ]
 
+require "date"
 some_random_input = unpredictable_inputs.sample
 
 p some_random_input
 
 # Write your code below
+# a String: downcase it and print it
+if some_random_input.class == String
+  p some_random_input.downcase
+end
 
+# a Time: figure out the day of the week, downcased, and print
+if some_random_input.class == Time
+  x = some_random_input.wday
+  y = [ "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" ]
+  p y[x]
+end
+
+# an Integer: figure out whether it's odd or even and print
+if some_random_input.class == Integer
+  if some_random_input % 2 == 0
+    p some_random_input.to_s+" is even"
+  else
+    p some_random_input.to_s+" is odd"
+  end
+end
+
+# a Symbol: downcase it and print it
+if some_random_input.class == Symbol
+  p some_random_input.downcase
+end
+
+# nil: print "no object provided"
+if some_random_input.class == NilClass
+  p "no object provided"
+end
+
+# true: print "you may pass"
+if some_random_input.class == TrueClass
+  p "you may pass"
+end
+
+# false: print "you may not pass"
+if some_random_input.class == FalseClass
+  p "you may not pass"
+end
+
+# a Hash: print the list of keys within the Hash, as an Array.
+if some_random_input.class == Hash
+  p some_random_input.keys
+end

@@ -6,9 +6,13 @@
 p "Are we there yet?"
 
 answer = gets.chomp.downcase
+ans = Array.new
+ans.push(answer.downcase)
 
 while answer != "yes"
   p "Are we there yet?"
   
   answer = gets.chomp.downcase
+  ans.push(answer.downcase)
 end
+p ans

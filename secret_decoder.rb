@@ -7,3 +7,10 @@
 
 
 p "Enter in the secret you want to decode"
+sentence = gets.chomp
+sentence = sentence.gsub("1", "a")
+sentence = sentence.gsub("2", "e")
+sentence = sentence.gsub("3", "i")
+sentence = sentence.gsub("4", "o")
+sentence = sentence.gsub("5", "u")
+p sentence.capitalize

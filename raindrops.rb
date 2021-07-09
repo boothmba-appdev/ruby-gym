@@ -37,3 +37,21 @@
 
 
 p "Enter an integer"
+num = gets.chomp.to_i
+content = ""
+if num % 3 == 0
+    content = content+"Pling"
+end
+if num % 5 == 0
+    content = content+"Plang"
+end
+if num % 7 ==0
+    content = content+"Plong"
+end
+if num % 3 == 0
+elsif num % 5 == 0
+elsif num % 7 == 0
+else
+    content = content + num.to_s 
+end
+p content
